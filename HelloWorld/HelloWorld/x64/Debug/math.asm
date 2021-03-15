@@ -6,29 +6,119 @@ INCLUDELIB MSVCRTD
 INCLUDELIB OLDNAMES
 
 msvcjmc	SEGMENT
+__2B31710D_vcruntime_new@h DB 01H
+__09340588_corecrt_math@h DB 01H
+__24E9E95F_stdlib@h DB 01H
+__ACEB72CA_cstdlib DB 01H
+__04BBFB62_cmath DB 01H
+__F66CEB67_corecrt_stdio_config@h DB 01H
+__101834BA_corecrt_wstdio@h DB 01H
+__AD6A91B7_stdio@h DB 01H
+__367CC694_corecrt_memcpy_s@h DB 01H
+__35D7DDB3_corecrt_memory@h DB 01H
+__DC9673E3_corecrt_wstring@h DB 01H
+__A29A7DFB_string@h DB 01H
+__5467428D_corecrt_wconio@h DB 01H
+__4442441F_corecrt_wio@h DB 01H
+__45F4AF76_corecrt_wtime@h DB 01H
+__186FF47F_stat@h DB 01H
+__534C724A_wchar@h DB 01H
+__2D26A21E_type_traits DB 01H
+__F4CD6065_xutility DB 01H
+__B0C4CEA9_malloc@h DB 01H
+__49CBC5C5_vcruntime_exception@h DB 01H
+__8B12B611_exception DB 01H
+__D63D5DDA_limits DB 01H
+__F1739482_xmemory DB 01H
+__85A0121E_xstring DB 01H
+__025C8C4C_stdexcept DB 01H
+__127BCABE_xcall_once@h DB 01H
+__8AA3BE86_time@h DB 01H
+__0E11DA62_xthreads@h DB 01H
+__BD080118_atomic DB 01H
+__AD26D89E_system_error DB 01H
+__B68D2755_vcruntime_typeinfo@h DB 01H
+__8412937C_typeinfo DB 01H
+__6A935154_memory DB 01H
+__46D6065B_xfacet DB 01H
+__7242C389_ctype@h DB 01H
+__9B9B70B4_xlocinfo DB 01H
+__5A9E662F_xlocale DB 01H
+__A27E07A7_xiosbase DB 01H
+__C4190038_xlocnum DB 01H
+__A1E1ADF7_ios DB 01H
 __85A6F400_math@cpp DB 01H
+__2A5E89D1_istream DB 01H
+__498EBCEB_ostream DB 01H
+__00FC34F0_streambuf DB 01H
+__E561D725_iterator DB 01H
+__1AD4885C_iosfwd DB 01H
+__9BE6F741_utility DB 01H
+__6CF96053_xstddef DB 01H
+__811E3AC7_xatomic@h DB 01H
 msvcjmc	ENDS
-PUBLIC	?Log@@YAPEBDPEBD@Z				; Log
-PUBLIC	?Multiply@@YAHHH@Z				; Multiply
+PUBLIC	?__empty_global_delete@@YAXPEAX@Z		; __empty_global_delete
+PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
+PUBLIC	main
+PUBLIC	??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ; std::endl<char,std::char_traits<char> >
 PUBLIC	__JustMyCode_Default
 PUBLIC	??_C@_08EOBDLMOI@Multiply@			; `string'
+EXTRN	__imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADD@Z:PROC
+EXTRN	__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z:PROC
+EXTRN	__imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z:PROC
+EXTRN	__imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@D@Z:PROC
+EXTRN	__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ:PROC
+EXTRN	__imp_?get@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAHXZ:PROC
+EXTRN	?Log@@YAXPEBD@Z:PROC				; Log
 EXTRN	__CheckForDebuggerJustMyCode:PROC
+EXTRN	__imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A:BYTE
+EXTRN	__imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A:BYTE
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?Log@@YAPEBDPEBD@Z DD imagerel $LN3
-	DD	imagerel $LN3+37
-	DD	imagerel $unwind$?Log@@YAPEBDPEBD@Z
+$pdata$?__empty_global_delete@@YAXPEAX@Z DD imagerel $LN3
+	DD	imagerel $LN3+33
+	DD	imagerel $unwind$?__empty_global_delete@@YAXPEAX@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?Multiply@@YAHHH@Z DD imagerel $LN3
-	DD	imagerel $LN3+55
+$pdata$?__empty_global_delete@@YAXPEAX_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+38
+	DD	imagerel $unwind$?__empty_global_delete@@YAXPEAX_K@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$?Multiply@@YAHHH@Z DD imagerel ?Multiply@@YAHHH@Z
+	DD	imagerel ?Multiply@@YAHHH@Z+55
 	DD	imagerel $unwind$?Multiply@@YAHHH@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$main DD	imagerel $LN3
+	DD	imagerel $LN3+90
+	DD	imagerel $unwind$main
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z DD imagerel $LN3
+	DD	imagerel $LN3+92
+	DD	imagerel $unwind$??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z
 pdata	ENDS
 ;	COMDAT ??_C@_08EOBDLMOI@Multiply@
 CONST	SEGMENT
 ??_C@_08EOBDLMOI@Multiply@ DB 'Multiply', 00H		; `string'
 CONST	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$main DD	025030b01H
+	DD	0b206230bH
+	DD	05002H
+xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
 $unwind$?Multiply@@YAHHH@Z DD 025031201H
@@ -37,7 +127,13 @@ $unwind$?Multiply@@YAHHH@Z DD 025031201H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?Log@@YAPEBDPEBD@Z DD 025030f01H
+$unwind$?__empty_global_delete@@YAXPEAX_K@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?__empty_global_delete@@YAXPEAX@Z DD 025030f01H
 	DD	0b20a230fH
 	DD	05006H
 xdata	ENDS
@@ -49,14 +145,83 @@ __JustMyCode_Default PROC				; COMDAT
 __JustMyCode_Default ENDP
 _TEXT	ENDS
 ; Function compile flags: /Odtp /ZI
+;	COMDAT ??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z
+_TEXT	SEGMENT
+_Ostr$ = 80
+??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z PROC ; std::endl<char,std::char_traits<char> >, COMDAT
+; File C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29333\include\ostream
+; Line 978
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__498EBCEB_ostream
+	call	__CheckForDebuggerJustMyCode
+; Line 979
+	mov	rax, QWORD PTR _Ostr$[rbp]
+	mov	rax, QWORD PTR [rax]
+	movsxd	rax, DWORD PTR [rax+4]
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	add	rcx, rax
+	mov	rax, rcx
+	mov	dl, 10
+	mov	rcx, rax
+	call	QWORD PTR __imp_?widen@?$basic_ios@DU?$char_traits@D@std@@@std@@QEBADD@Z
+	movzx	edx, al
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	call	QWORD PTR __imp_?put@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@D@Z
+; Line 980
+	mov	rcx, QWORD PTR _Ostr$[rbp]
+	call	QWORD PTR __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ
+; Line 981
+	mov	rax, QWORD PTR _Ostr$[rbp]
+; Line 982
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ENDP ; std::endl<char,std::char_traits<char> >
+_TEXT	ENDS
+; Function compile flags: /Odtp /ZI
+;	COMDAT main
+_TEXT	SEGMENT
+main	PROC						; COMDAT
+; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\math.cpp
+; Line 11
+$LN3:
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__85A6F400_math@cpp
+	call	__CheckForDebuggerJustMyCode
+; Line 12
+	mov	edx, 8
+	mov	ecx, 5
+	call	?Multiply@@YAHHH@Z			; Multiply
+	mov	edx, eax
+	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	call	QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@H@Z
+	lea	rdx, OFFSET FLAT:??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	rcx, rax
+	call	QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z
+; Line 13
+	mov	rcx, QWORD PTR __imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A
+	call	QWORD PTR __imp_?get@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAHXZ
+; Line 14
+	xor	eax, eax
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+main	ENDP
+_TEXT	ENDS
+; Function compile flags: /Odtp /ZI
 ;	COMDAT ?Multiply@@YAHHH@Z
 _TEXT	SEGMENT
 a$ = 80
 b$ = 88
 ?Multiply@@YAHHH@Z PROC					; Multiply, COMDAT
 ; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\math.cpp
-; Line 5
-$LN3:
+; Line 6
 	mov	DWORD PTR [rsp+16], edx
 	mov	DWORD PTR [rsp+8], ecx
 	push	rbp
@@ -64,25 +229,46 @@ $LN3:
 	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__85A6F400_math@cpp
 	call	__CheckForDebuggerJustMyCode
-; Line 6
-	lea	rcx, OFFSET FLAT:??_C@_08EOBDLMOI@Multiply@
-	call	?Log@@YAPEBDPEBD@Z			; Log
 ; Line 7
+	lea	rcx, OFFSET FLAT:??_C@_08EOBDLMOI@Multiply@
+	call	?Log@@YAXPEBD@Z				; Log
+; Line 8
 	mov	eax, DWORD PTR a$[rbp]
 	imul	eax, DWORD PTR b$[rbp]
-; Line 8
+; Line 9
 	lea	rsp, QWORD PTR [rbp+64]
 	pop	rbp
 	ret	0
 ?Multiply@@YAHHH@Z ENDP					; Multiply
 _TEXT	ENDS
 ; Function compile flags: /Odtp /ZI
-;	COMDAT ?Log@@YAPEBDPEBD@Z
+;	COMDAT ?__empty_global_delete@@YAXPEAX_K@Z
 _TEXT	SEGMENT
-message$ = 80
-?Log@@YAPEBDPEBD@Z PROC					; Log, COMDAT
+__formal$ = 80
+__formal$ = 88
+?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
 ; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\math.cpp
-; Line 1
+; Line 15
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__85A6F400_math@cpp
+	call	__CheckForDebuggerJustMyCode
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?__empty_global_delete@@YAXPEAX_K@Z ENDP		; __empty_global_delete
+_TEXT	ENDS
+; Function compile flags: /Odtp /ZI
+;	COMDAT ?__empty_global_delete@@YAXPEAX@Z
+_TEXT	SEGMENT
+__formal$ = 80
+?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
+; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\math.cpp
+; Line 15
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
@@ -90,12 +276,9 @@ $LN3:
 	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__85A6F400_math@cpp
 	call	__CheckForDebuggerJustMyCode
-; Line 2
-	mov	rax, QWORD PTR message$[rbp]
-; Line 3
 	lea	rsp, QWORD PTR [rbp+64]
 	pop	rbp
 	ret	0
-?Log@@YAPEBDPEBD@Z ENDP					; Log
+?__empty_global_delete@@YAXPEAX@Z ENDP			; __empty_global_delete
 _TEXT	ENDS
 END

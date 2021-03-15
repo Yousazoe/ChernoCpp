@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>E:\Dev\CppSeries\HelloWorld\x64\Debug\HelloWorld.exe</FullPath>
+      <FullPath>E:\Dev\CppSeries\ChernoCpp\HelloWorld\x64\Debug\HelloWorld.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />
