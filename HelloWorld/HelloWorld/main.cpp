@@ -1,41 +1,53 @@
 #include <iostream>
 
-class Log {
-public:
-	cons2t int LogLevelError = 0;
-	const int LogLevelWarning = 1;
-	const int LogLevelInfo = 2;
+class String {
 private:
-	int m_LogLevel = LogLevelInfo;
+	char* buffer;
+	unsigned int size;
+
 public:
-	void SetLevel(int level) {
-		m_LogLevel = level;
+	String(const char* string) {
+		size = strlen(string);
+		buffer = new char[size + 1];
+
+		memcpy(buffer, string, size);
+		buffer[size] = 0;
 	}
 
-	void Error(const char* message) {
-		if (m_LogLevel >= LogLevelError)
-			std::cout << "[ERROR]:  " << message << std::endl;
+	String(const String& other) : size(other.size) {
+		std::cout << "Copy String!" << std::endl;
+
+		buffer = new char[size + 1];
+		memcpy(buffer, other.buffer, size + 1);
+		buffer[size] = 0;
 	}
 
-	void Warn(const char* message) {
-		if (m_LogLevel >= LogLevelWarning)
-			std::cout << "[WARNING]:  " << message << std::endl;
+	~String() {
+		delete[] buffer;
 	}
 
-	void Info(const char* message) {
-		if (m_LogLevel >= LogLevelInfo)
-			std::cout << "[INFO]:  " << message << std::endl;
+	char& operator[](unsigned int index) {
+		return buffer[index];
 	}
 
+	friend std::ostream& operator<<(std::ostream& stream, const String& string);
 };
 
-int main() {
-	Log log;
-	log.SetLevel(log.LogLevelWarning);
+std::ostream& operator<<(std::ostream& stream, const String& string) {
+	stream << string.buffer;
+	return stream;
+}
 
-	log.Error("Hello");
-	log.Warn("Hello");
-	log.Info("Hello");
+void printString(const String& string) {
+	std::cout << string << std::endl;
+}
+
+int main() {
+	String string = "Yousazoe";
+	String second = string;
+
+	printString(string);
+	printString(second);
 
 	std::cin.get();
 }

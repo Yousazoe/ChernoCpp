@@ -62,13 +62,14 @@ PUBLIC	?__empty_global_delete@@YAXPEAX_K@Z		; __empty_global_delete
 PUBLIC	?length@?$_Narrow_char_traits@DH@std@@SA_KQEBD@Z ; std::_Narrow_char_traits<char,int>::length
 PUBLIC	?eq_int_type@?$_Narrow_char_traits@DH@std@@SA_NAEBH0@Z ; std::_Narrow_char_traits<char,int>::eq_int_type
 PUBLIC	?eof@?$_Narrow_char_traits@DH@std@@SAHXZ	; std::_Narrow_char_traits<char,int>::eof
-PUBLIC	?SetLevel@Log@@QEAAXH@Z				; Log::SetLevel
-PUBLIC	?Error@Log@@QEAAXPEBD@Z				; Log::Error
-PUBLIC	?Warn@Log@@QEAAXPEBD@Z				; Log::Warn
-PUBLIC	?Info@Log@@QEAAXPEBD@Z				; Log::Info
-PUBLIC	??0Log@@QEAA@XZ					; Log::Log
+PUBLIC	??0String@@QEAA@PEBD@Z				; String::String
+PUBLIC	??0String@@QEAA@AEBV0@@Z			; String::String
+PUBLIC	??1String@@QEAA@XZ				; String::~String
+PUBLIC	??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVString@@@Z ; operator<<
+PUBLIC	?__autoclassinit2@String@@QEAAX_K@Z		; String::__autoclassinit2
 PUBLIC	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
 PUBLIC	??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ; std::endl<char,std::char_traits<char> >
+PUBLIC	?printString@@YAXAEBVString@@@Z			; printString
 PUBLIC	main
 PUBLIC	??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::_Sentry_base
 PUBLIC	??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::_Sentry_base::~_Sentry_base
@@ -76,10 +77,11 @@ PUBLIC	??0sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12@@Z ; s
 PUBLIC	??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@XZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::~sentry
 PUBLIC	??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ ; std::basic_ostream<char,std::char_traits<char> >::sentry::operator bool
 PUBLIC	__JustMyCode_Default
-PUBLIC	??_C@_0L@PNAKJIEN@?$FLERROR?$FN?3?5?5@		; `string'
-PUBLIC	??_C@_0N@CIDLFGCI@?$FLWARNING?$FN?3?5?5@	; `string'
-PUBLIC	??_C@_09DIKOAGLC@?$FLINFO?$FN?3?5?5@		; `string'
-PUBLIC	??_C@_05COLMCDPH@Hello@				; `string'
+PUBLIC	??_C@_0N@NHDNDIPO@Copy?5String?$CB@		; `string'
+PUBLIC	??_C@_08GPLCDHC@Yousazoe@			; `string'
+EXTRN	??_U@YAPEAX_K@Z:PROC				; operator new[]
+EXTRN	??_V@YAXPEAX@Z:PROC				; operator delete[]
+EXTRN	memcpy:PROC
 EXTRN	strlen:PROC
 EXTRN	?uncaught_exception@std@@YA_NXZ:PROC		; std::uncaught_exception
 EXTRN	__imp_?good@ios_base@std@@QEBA_NXZ:PROC
@@ -100,7 +102,6 @@ EXTRN	__imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV12@XZ:PR
 EXTRN	__imp_?get@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAHXZ:PROC
 EXTRN	__CheckForDebuggerJustMyCode:PROC
 EXTRN	__CxxFrameHandler4:PROC
-EXTRN	__GSHandlerCheck:PROC
 EXTRN	__GSHandlerCheck_EH4:PROC
 EXTRN	__security_check_cookie:PROC
 EXTRN	__imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A:BYTE
@@ -138,33 +139,33 @@ $pdata$?eof@?$_Narrow_char_traits@DH@std@@SAHXZ DD imagerel $LN3
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?SetLevel@Log@@QEAAXH@Z DD imagerel $LN3
-	DD	imagerel $LN3+47
-	DD	imagerel $unwind$?SetLevel@Log@@QEAAXH@Z
+$pdata$??0String@@QEAA@PEBD@Z DD imagerel $LN3
+	DD	imagerel $LN3+135
+	DD	imagerel $unwind$??0String@@QEAA@PEBD@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?Error@Log@@QEAAXPEBD@Z DD imagerel $LN4
-	DD	imagerel $LN4+100
-	DD	imagerel $unwind$?Error@Log@@QEAAXPEBD@Z
+$pdata$??0String@@QEAA@AEBV0@@Z DD imagerel $LN3
+	DD	imagerel $LN3+175
+	DD	imagerel $unwind$??0String@@QEAA@AEBV0@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?Warn@Log@@QEAAXPEBD@Z DD imagerel $LN4
-	DD	imagerel $LN4+101
-	DD	imagerel $unwind$?Warn@Log@@QEAAXPEBD@Z
+$pdata$??1String@@QEAA@XZ DD imagerel $LN3
+	DD	imagerel $LN3+53
+	DD	imagerel $unwind$??1String@@QEAA@XZ
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$?Info@Log@@QEAAXPEBD@Z DD imagerel $LN4
-	DD	imagerel $LN4+101
-	DD	imagerel $unwind$?Info@Log@@QEAAXPEBD@Z
+$pdata$??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVString@@@Z DD imagerel $LN3
+	DD	imagerel $LN3+58
+	DD	imagerel $unwind$??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVString@@@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$??0Log@@QEAA@XZ DD imagerel $LN3
-	DD	imagerel $LN3+69
-	DD	imagerel $unwind$??0Log@@QEAA@XZ
+$pdata$?__autoclassinit2@String@@QEAAX_K@Z DD imagerel $LN3
+	DD	imagerel $LN3+38
+	DD	imagerel $unwind$?__autoclassinit2@String@@QEAAX_K@Z
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -192,9 +193,27 @@ $pdata$??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_trait
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
-$pdata$main DD	imagerel $LN3
-	DD	imagerel $LN3+142
+$pdata$?printString@@YAXAEBVString@@@Z DD imagerel $LN3
+	DD	imagerel $LN3+65
+	DD	imagerel $unwind$?printString@@YAXAEBVString@@@Z
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$main DD	imagerel $LN5
+	DD	imagerel $LN5+170
 	DD	imagerel $unwind$main
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$main$dtor$0 DD imagerel main$dtor$0
+	DD	imagerel main$dtor$0+25
+	DD	imagerel $unwind$main$dtor$0
+pdata	ENDS
+;	COMDAT pdata
+pdata	SEGMENT
+$pdata$main$dtor$1 DD imagerel main$dtor$1
+	DD	imagerel main$dtor$1+25
+	DD	imagerel $unwind$main$dtor$1
 pdata	ENDS
 ;	COMDAT pdata
 pdata	SEGMENT
@@ -232,21 +251,13 @@ $pdata$??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ DD imager
 	DD	imagerel $LN3+41
 	DD	imagerel $unwind$??Bsentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEBA_NXZ
 pdata	ENDS
-;	COMDAT ??_C@_05COLMCDPH@Hello@
+;	COMDAT ??_C@_08GPLCDHC@Yousazoe@
 CONST	SEGMENT
-??_C@_05COLMCDPH@Hello@ DB 'Hello', 00H			; `string'
+??_C@_08GPLCDHC@Yousazoe@ DB 'Yousazoe', 00H		; `string'
 CONST	ENDS
-;	COMDAT ??_C@_09DIKOAGLC@?$FLINFO?$FN?3?5?5@
+;	COMDAT ??_C@_0N@NHDNDIPO@Copy?5String?$CB@
 CONST	SEGMENT
-??_C@_09DIKOAGLC@?$FLINFO?$FN?3?5?5@ DB '[INFO]:  ', 00H ; `string'
-CONST	ENDS
-;	COMDAT ??_C@_0N@CIDLFGCI@?$FLWARNING?$FN?3?5?5@
-CONST	SEGMENT
-??_C@_0N@CIDLFGCI@?$FLWARNING?$FN?3?5?5@ DB '[WARNING]:  ', 00H ; `string'
-CONST	ENDS
-;	COMDAT ??_C@_0L@PNAKJIEN@?$FLERROR?$FN?3?5?5@
-CONST	SEGMENT
-??_C@_0L@PNAKJIEN@?$FLERROR?$FN?3?5?5@ DB '[ERROR]:  ', 00H ; `string'
+??_C@_0N@NHDNDIPO@Copy?5String?$CB@ DB 'Copy String!', 00H ; `string'
 CONST	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -335,11 +346,56 @@ $unwind$??0_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAA@AEAV12
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$main DD	025031c19H
-	DD	0f209230eH
-	DD	05002H
-	DD	imagerel __GSHandlerCheck
-	DD	070H
+$unwind$main$dtor$1 DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$main$dtor$0 DD 020601H
+	DD	050023206H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$ip2state$main DB 0aH
+	DB	00H
+	DB	00H
+	DB	08eH
+	DB	02H
+	DB	'8'
+	DB	04H
+	DB	'@'
+	DB	02H
+	DB	014H
+	DB	00H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$stateUnwindMap$main DB 04H
+	DB	0eH
+	DD	imagerel main$dtor$0
+	DB	02eH
+	DD	imagerel main$dtor$1
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$cppxdata$main DB 028H
+	DD	imagerel $stateUnwindMap$main
+	DD	imagerel $ip2state$main
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$main DD	025041c19H
+	DD	0109230eH
+	DD	050020012H
+	DD	imagerel __GSHandlerCheck_EH4
+	DD	imagerel $cppxdata$main
+	DD	082H
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$?printString@@YAXAEBVString@@@Z DD 025030f01H
+	DD	0b20a230fH
+	DD	05006H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -412,33 +468,33 @@ $unwind$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$??0Log@@QEAA@XZ DD 05030d01H
-	DD	0720a030dH
+$unwind$?__autoclassinit2@String@@QEAAX_K@Z DD 05041301H
+	DD	082100313H
+	DD	0500b700cH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVString@@@Z DD 025031401H
+	DD	0b20f2314H
+	DD	0500bH
+xdata	ENDS
+;	COMDAT xdata
+xdata	SEGMENT
+$unwind$??1String@@QEAA@XZ DD 025030f01H
+	DD	0d20a230fH
 	DD	05006H
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?Info@Log@@QEAAXPEBD@Z DD 025031401H
-	DD	0b20f2314H
+$unwind$??0String@@QEAA@AEBV0@@Z DD 025031401H
+	DD	0d20f2314H
 	DD	0500bH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
-$unwind$?Warn@Log@@QEAAXPEBD@Z DD 025031401H
-	DD	0b20f2314H
+$unwind$??0String@@QEAA@PEBD@Z DD 025031401H
+	DD	0d20f2314H
 	DD	0500bH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?Error@Log@@QEAAXPEBD@Z DD 025031401H
-	DD	0b20f2314H
-	DD	0500bH
-xdata	ENDS
-;	COMDAT xdata
-xdata	SEGMENT
-$unwind$?SetLevel@Log@@QEAAXH@Z DD 025031301H
-	DD	0b20e2313H
-	DD	0500aH
 xdata	ENDS
 ;	COMDAT xdata
 xdata	SEGMENT
@@ -761,51 +817,154 @@ _TEXT	ENDS
 ; Function compile flags: /Odtp /ZI
 ;	COMDAT main
 _TEXT	SEGMENT
-log$ = 0
-__$ArrayPad$ = 80
+string$ = 0
+second$ = 16
+__$ArrayPad$ = 96
 main	PROC						; COMDAT
 ; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
-; Line 32
-$LN3:
+; Line 45
+$LN5:
 	push	rbp
-	sub	rsp, 128				; 00000080H
+	sub	rsp, 144				; 00000090H
 	lea	rbp, QWORD PTR [rsp+32]
 	mov	rax, QWORD PTR __security_cookie
 	xor	rax, rbp
 	mov	QWORD PTR __$ArrayPad$[rbp], rax
 	lea	rcx, OFFSET FLAT:__B5AE10E5_main@cpp
 	call	__CheckForDebuggerJustMyCode
-; Line 33
-	lea	rcx, QWORD PTR log$[rbp]
-	call	??0Log@@QEAA@XZ
-; Line 34
-	mov	edx, DWORD PTR log$[rbp+4]
-	lea	rcx, QWORD PTR log$[rbp]
-	call	?SetLevel@Log@@QEAAXH@Z			; Log::SetLevel
-; Line 36
-	lea	rdx, OFFSET FLAT:??_C@_05COLMCDPH@Hello@
-	lea	rcx, QWORD PTR log$[rbp]
-	call	?Error@Log@@QEAAXPEBD@Z			; Log::Error
-; Line 37
-	lea	rdx, OFFSET FLAT:??_C@_05COLMCDPH@Hello@
-	lea	rcx, QWORD PTR log$[rbp]
-	call	?Warn@Log@@QEAAXPEBD@Z			; Log::Warn
-; Line 38
-	lea	rdx, OFFSET FLAT:??_C@_05COLMCDPH@Hello@
-	lea	rcx, QWORD PTR log$[rbp]
-	call	?Info@Log@@QEAAXPEBD@Z			; Log::Info
-; Line 40
+; Line 46
+	mov	edx, 16
+	lea	rcx, QWORD PTR string$[rbp]
+	call	?__autoclassinit2@String@@QEAAX_K@Z
+	lea	rdx, OFFSET FLAT:??_C@_08GPLCDHC@Yousazoe@
+	lea	rcx, QWORD PTR string$[rbp]
+	call	??0String@@QEAA@PEBD@Z			; String::String
+	npad	1
+; Line 47
+	mov	edx, 16
+	lea	rcx, QWORD PTR second$[rbp]
+	call	?__autoclassinit2@String@@QEAAX_K@Z
+	lea	rdx, QWORD PTR string$[rbp]
+	lea	rcx, QWORD PTR second$[rbp]
+	call	??0String@@QEAA@AEBV0@@Z		; String::String
+	npad	1
+; Line 49
+	lea	rcx, QWORD PTR string$[rbp]
+	call	?printString@@YAXAEBVString@@@Z		; printString
+; Line 50
+	lea	rcx, QWORD PTR second$[rbp]
+	call	?printString@@YAXAEBVString@@@Z		; printString
+; Line 52
 	mov	rcx, QWORD PTR __imp_?cin@std@@3V?$basic_istream@DU?$char_traits@D@std@@@1@A
 	call	QWORD PTR __imp_?get@?$basic_istream@DU?$char_traits@D@std@@@std@@QEAAHXZ
-; Line 41
+	npad	1
+; Line 53
+	lea	rcx, QWORD PTR second$[rbp]
+	call	??1String@@QEAA@XZ			; String::~String
+	npad	1
+	lea	rcx, QWORD PTR string$[rbp]
+	call	??1String@@QEAA@XZ			; String::~String
 	xor	eax, eax
 	mov	rcx, QWORD PTR __$ArrayPad$[rbp]
 	xor	rcx, rbp
 	call	__security_check_cookie
-	lea	rsp, QWORD PTR [rbp+96]
+	lea	rsp, QWORD PTR [rbp+112]
 	pop	rbp
 	ret	0
 main	ENDP
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+string$ = 0
+second$ = 16
+__$ArrayPad$ = 96
+main$dtor$0 PROC
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	lea	rcx, QWORD PTR string$[rbp]
+	call	??1String@@QEAA@XZ			; String::~String
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+main$dtor$0 ENDP
+text$x	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+string$ = 0
+second$ = 16
+__$ArrayPad$ = 96
+main$dtor$1 PROC
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	lea	rcx, QWORD PTR second$[rbp]
+	call	??1String@@QEAA@XZ			; String::~String
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+main$dtor$1 ENDP
+text$x	ENDS
+; Function compile flags: /Odtp /ZI
+;	COMDAT text$x
+text$x	SEGMENT
+string$ = 0
+second$ = 16
+__$ArrayPad$ = 96
+main$dtor$0 PROC
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	lea	rcx, QWORD PTR string$[rbp]
+	call	??1String@@QEAA@XZ			; String::~String
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+main$dtor$0 ENDP
+text$x	ENDS
+; Function compile flags: /Odtp /ZI
+;	COMDAT text$x
+text$x	SEGMENT
+string$ = 0
+second$ = 16
+__$ArrayPad$ = 96
+main$dtor$1 PROC
+	push	rbp
+	sub	rsp, 32					; 00000020H
+	lea	rbp, QWORD PTR [rdx+32]
+	lea	rcx, QWORD PTR second$[rbp]
+	call	??1String@@QEAA@XZ			; String::~String
+	add	rsp, 32					; 00000020H
+	pop	rbp
+	ret	0
+main$dtor$1 ENDP
+text$x	ENDS
+; Function compile flags: /Odtp /ZI
+;	COMDAT ?printString@@YAXAEBVString@@@Z
+_TEXT	SEGMENT
+string$ = 80
+?printString@@YAXAEBVString@@@Z PROC			; printString, COMDAT
+; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
+; Line 41
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__B5AE10E5_main@cpp
+	call	__CheckForDebuggerJustMyCode
+; Line 42
+	mov	rdx, QWORD PTR string$[rbp]
+	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
+	call	??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVString@@@Z ; operator<<
+	lea	rdx, OFFSET FLAT:??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ; std::endl<char,std::char_traits<char> >
+	mov	rcx, rax
+	call	QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z
+; Line 43
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+?printString@@YAXAEBVString@@@Z ENDP			; printString
 _TEXT	ENDS
 ; Function compile flags: /Odtp /ZI
 ;	COMDAT ??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z
@@ -1302,173 +1461,200 @@ __catch$??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D
 ?catch$1@?0???$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z@4HA ENDP ; `std::operator<<<std::char_traits<char> >'::`1'::catch$1
 text$x	ENDS
 ; Function compile flags: /Odtp /ZI
-;	COMDAT ??0Log@@QEAA@XZ
+;	COMDAT ?__autoclassinit2@String@@QEAAX_K@Z
 _TEXT	SEGMENT
-this$ = 80
-??0Log@@QEAA@XZ PROC					; Log::Log, COMDAT
+this$ = 96
+classSize$ = 104
+?__autoclassinit2@String@@QEAAX_K@Z PROC		; String::__autoclassinit2, COMDAT
 $LN3:
+	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
-	sub	rsp, 64					; 00000040H
+	push	rdi
+	sub	rsp, 72					; 00000048H
 	mov	rbp, rsp
-	mov	rax, QWORD PTR this$[rbp]
-	mov	DWORD PTR [rax], 0
-	mov	rax, QWORD PTR this$[rbp]
-	mov	DWORD PTR [rax+4], 1
-	mov	rax, QWORD PTR this$[rbp]
-	mov	DWORD PTR [rax+8], 2
-	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR this$[rbp]
-	mov	ecx, DWORD PTR [rcx+8]
-	mov	DWORD PTR [rax+12], ecx
-	mov	rax, QWORD PTR this$[rbp]
-	lea	rsp, QWORD PTR [rbp+64]
+	mov	rdi, QWORD PTR this$[rbp]
+	xor	eax, eax
+	mov	rcx, QWORD PTR classSize$[rbp]
+	rep stosb
+	lea	rsp, QWORD PTR [rbp+72]
+	pop	rdi
 	pop	rbp
 	ret	0
-??0Log@@QEAA@XZ ENDP					; Log::Log
+?__autoclassinit2@String@@QEAAX_K@Z ENDP		; String::__autoclassinit2
 _TEXT	ENDS
 ; Function compile flags: /Odtp /ZI
-;	COMDAT ?Info@Log@@QEAAXPEBD@Z
+;	COMDAT ??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVString@@@Z
 _TEXT	SEGMENT
-this$ = 80
-message$ = 88
-?Info@Log@@QEAAXPEBD@Z PROC				; Log::Info, COMDAT
+stream$ = 80
+string$ = 88
+??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVString@@@Z PROC ; operator<<, COMDAT
 ; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
-; Line 25
-$LN4:
+; Line 36
+$LN3:
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
 	sub	rsp, 96					; 00000060H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__B5AE10E5_main@cpp
+	call	__CheckForDebuggerJustMyCode
+; Line 37
+	mov	rax, QWORD PTR string$[rbp]
+	mov	rdx, QWORD PTR [rax]
+	mov	rcx, QWORD PTR stream$[rbp]
+	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
+; Line 38
+	mov	rax, QWORD PTR stream$[rbp]
+; Line 39
+	lea	rsp, QWORD PTR [rbp+64]
+	pop	rbp
+	ret	0
+??6@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AEAV01@AEBVString@@@Z ENDP ; operator<<
+_TEXT	ENDS
+; Function compile flags: /Odtp /ZI
+;	COMDAT ??1String@@QEAA@XZ
+_TEXT	SEGMENT
+$T1 = 64
+this$ = 96
+??1String@@QEAA@XZ PROC					; String::~String, COMDAT
+; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
+; Line 25
+$LN3:
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
 	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__B5AE10E5_main@cpp
 	call	__CheckForDebuggerJustMyCode
 ; Line 26
 	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR this$[rbp]
-	mov	ecx, DWORD PTR [rcx+8]
-	cmp	DWORD PTR [rax+12], ecx
-	jl	SHORT $LN2@Info
+	mov	rax, QWORD PTR [rax]
+	mov	QWORD PTR $T1[rbp], rax
+	mov	rcx, QWORD PTR $T1[rbp]
+	call	??_V@YAXPEAX@Z				; operator delete[]
 ; Line 27
-	lea	rdx, OFFSET FLAT:??_C@_09DIKOAGLC@?$FLINFO?$FN?3?5?5@
+	lea	rsp, QWORD PTR [rbp+80]
+	pop	rbp
+	ret	0
+??1String@@QEAA@XZ ENDP					; String::~String
+_TEXT	ENDS
+; Function compile flags: /Odtp /ZI
+;	COMDAT ??0String@@QEAA@AEBV0@@Z
+_TEXT	SEGMENT
+$T1 = 64
+this$ = 96
+other$ = 104
+??0String@@QEAA@AEBV0@@Z PROC				; String::String, COMDAT
+; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
+; Line 17
+$LN3:
+	mov	QWORD PTR [rsp+16], rdx
+	mov	QWORD PTR [rsp+8], rcx
+	push	rbp
+	sub	rsp, 112				; 00000070H
+	lea	rbp, QWORD PTR [rsp+32]
+	lea	rcx, OFFSET FLAT:__B5AE10E5_main@cpp
+	call	__CheckForDebuggerJustMyCode
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR other$[rbp]
+	mov	ecx, DWORD PTR [rcx+8]
+	mov	DWORD PTR [rax+8], ecx
+; Line 18
+	lea	rdx, OFFSET FLAT:??_C@_0N@NHDNDIPO@Copy?5String?$CB@
 	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
-	mov	rdx, QWORD PTR message$[rbp]
-	mov	rcx, rax
 	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
 	lea	rdx, OFFSET FLAT:??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ; std::endl<char,std::char_traits<char> >
 	mov	rcx, rax
 	call	QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z
-$LN2@Info:
-; Line 28
-	lea	rsp, QWORD PTR [rbp+64]
-	pop	rbp
-	ret	0
-?Info@Log@@QEAAXPEBD@Z ENDP				; Log::Info
-_TEXT	ENDS
-; Function compile flags: /Odtp /ZI
-;	COMDAT ?Warn@Log@@QEAAXPEBD@Z
-_TEXT	SEGMENT
-this$ = 80
-message$ = 88
-?Warn@Log@@QEAAXPEBD@Z PROC				; Log::Warn, COMDAT
-; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
 ; Line 20
-$LN4:
-	mov	QWORD PTR [rsp+16], rdx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 96					; 00000060H
-	lea	rbp, QWORD PTR [rsp+32]
-	lea	rcx, OFFSET FLAT:__B5AE10E5_main@cpp
-	call	__CheckForDebuggerJustMyCode
+	mov	rax, QWORD PTR this$[rbp]
+	mov	eax, DWORD PTR [rax+8]
+	inc	eax
+	mov	eax, eax
+	mov	ecx, eax
+	call	??_U@YAPEAX_K@Z				; operator new[]
+	mov	QWORD PTR $T1[rbp], rax
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR $T1[rbp]
+	mov	QWORD PTR [rax], rcx
 ; Line 21
 	mov	rax, QWORD PTR this$[rbp]
-	mov	rcx, QWORD PTR this$[rbp]
-	mov	ecx, DWORD PTR [rcx+4]
-	cmp	DWORD PTR [rax+12], ecx
-	jl	SHORT $LN2@Warn
+	mov	eax, DWORD PTR [rax+8]
+	inc	eax
+	mov	eax, eax
+	mov	r8d, eax
+	mov	rax, QWORD PTR other$[rbp]
+	mov	rdx, QWORD PTR [rax]
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR [rax]
+	call	memcpy
 ; Line 22
-	lea	rdx, OFFSET FLAT:??_C@_0N@CIDLFGCI@?$FLWARNING?$FN?3?5?5@
-	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
-	mov	rdx, QWORD PTR message$[rbp]
-	mov	rcx, rax
-	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
-	lea	rdx, OFFSET FLAT:??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ; std::endl<char,std::char_traits<char> >
-	mov	rcx, rax
-	call	QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z
-$LN2@Warn:
+	mov	rax, QWORD PTR this$[rbp]
+	mov	eax, DWORD PTR [rax+8]
+	mov	rcx, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR [rcx]
+	mov	BYTE PTR [rcx+rax], 0
 ; Line 23
-	lea	rsp, QWORD PTR [rbp+64]
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+80]
 	pop	rbp
 	ret	0
-?Warn@Log@@QEAAXPEBD@Z ENDP				; Log::Warn
+??0String@@QEAA@AEBV0@@Z ENDP				; String::String
 _TEXT	ENDS
 ; Function compile flags: /Odtp /ZI
-;	COMDAT ?Error@Log@@QEAAXPEBD@Z
+;	COMDAT ??0String@@QEAA@PEBD@Z
 _TEXT	SEGMENT
-this$ = 80
-message$ = 88
-?Error@Log@@QEAAXPEBD@Z PROC				; Log::Error, COMDAT
+$T1 = 64
+this$ = 96
+string$ = 104
+??0String@@QEAA@PEBD@Z PROC				; String::String, COMDAT
 ; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
-; Line 15
-$LN4:
+; Line 9
+$LN3:
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp
-	sub	rsp, 96					; 00000060H
+	sub	rsp, 112				; 00000070H
 	lea	rbp, QWORD PTR [rsp+32]
 	lea	rcx, OFFSET FLAT:__B5AE10E5_main@cpp
 	call	__CheckForDebuggerJustMyCode
-; Line 16
-	mov	rax, QWORD PTR this$[rbp]
+; Line 10
+	mov	rcx, QWORD PTR string$[rbp]
+	call	strlen
 	mov	rcx, QWORD PTR this$[rbp]
-	mov	ecx, DWORD PTR [rcx]
-	cmp	DWORD PTR [rax+12], ecx
-	jl	SHORT $LN2@Error
-; Line 17
-	lea	rdx, OFFSET FLAT:??_C@_0L@PNAKJIEN@?$FLERROR?$FN?3?5?5@
-	mov	rcx, QWORD PTR __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A
-	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
-	mov	rdx, QWORD PTR message$[rbp]
-	mov	rcx, rax
-	call	??$?6U?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@PEBD@Z ; std::operator<<<std::char_traits<char> >
-	lea	rdx, OFFSET FLAT:??$endl@DU?$char_traits@D@std@@@std@@YAAEAV?$basic_ostream@DU?$char_traits@D@std@@@0@AEAV10@@Z ; std::endl<char,std::char_traits<char> >
-	mov	rcx, rax
-	call	QWORD PTR __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QEAAAEAV01@P6AAEAV01@AEAV01@@Z@Z
-$LN2@Error:
-; Line 18
-	lea	rsp, QWORD PTR [rbp+64]
-	pop	rbp
-	ret	0
-?Error@Log@@QEAAXPEBD@Z ENDP				; Log::Error
-_TEXT	ENDS
-; Function compile flags: /Odtp /ZI
-;	COMDAT ?SetLevel@Log@@QEAAXH@Z
-_TEXT	SEGMENT
-this$ = 80
-level$ = 88
-?SetLevel@Log@@QEAAXH@Z PROC				; Log::SetLevel, COMDAT
-; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
+	mov	DWORD PTR [rcx+8], eax
 ; Line 11
-$LN3:
-	mov	DWORD PTR [rsp+16], edx
-	mov	QWORD PTR [rsp+8], rcx
-	push	rbp
-	sub	rsp, 96					; 00000060H
-	lea	rbp, QWORD PTR [rsp+32]
-	lea	rcx, OFFSET FLAT:__B5AE10E5_main@cpp
-	call	__CheckForDebuggerJustMyCode
-; Line 12
 	mov	rax, QWORD PTR this$[rbp]
-	mov	ecx, DWORD PTR level$[rbp]
-	mov	DWORD PTR [rax+12], ecx
+	mov	eax, DWORD PTR [rax+8]
+	inc	eax
+	mov	eax, eax
+	mov	ecx, eax
+	call	??_U@YAPEAX_K@Z				; operator new[]
+	mov	QWORD PTR $T1[rbp], rax
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR $T1[rbp]
+	mov	QWORD PTR [rax], rcx
 ; Line 13
-	lea	rsp, QWORD PTR [rbp+64]
+	mov	rax, QWORD PTR this$[rbp]
+	mov	eax, DWORD PTR [rax+8]
+	mov	r8d, eax
+	mov	rdx, QWORD PTR string$[rbp]
+	mov	rax, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR [rax]
+	call	memcpy
+; Line 14
+	mov	rax, QWORD PTR this$[rbp]
+	mov	eax, DWORD PTR [rax+8]
+	mov	rcx, QWORD PTR this$[rbp]
+	mov	rcx, QWORD PTR [rcx]
+	mov	BYTE PTR [rcx+rax], 0
+; Line 15
+	mov	rax, QWORD PTR this$[rbp]
+	lea	rsp, QWORD PTR [rbp+80]
 	pop	rbp
 	ret	0
-?SetLevel@Log@@QEAAXH@Z ENDP				; Log::SetLevel
+??0String@@QEAA@PEBD@Z ENDP				; String::String
 _TEXT	ENDS
 ; Function compile flags: /Odtp /ZI
 ;	COMDAT ?eof@?$_Narrow_char_traits@DH@std@@SAHXZ
@@ -1555,7 +1741,7 @@ __formal$ = 80
 __formal$ = 88
 ?__empty_global_delete@@YAXPEAX_K@Z PROC		; __empty_global_delete, COMDAT
 ; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
-; Line 42
+; Line 54
 $LN3:
 	mov	QWORD PTR [rsp+16], rdx
 	mov	QWORD PTR [rsp+8], rcx
@@ -1575,7 +1761,7 @@ _TEXT	SEGMENT
 __formal$ = 80
 ?__empty_global_delete@@YAXPEAX@Z PROC			; __empty_global_delete, COMDAT
 ; File E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp
-; Line 42
+; Line 54
 $LN3:
 	mov	QWORD PTR [rsp+8], rcx
 	push	rbp

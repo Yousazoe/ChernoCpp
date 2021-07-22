@@ -1,2 +1,3 @@
 ﻿  main.cpp
+E:\Dev\CppSeries\ChernoCpp\HelloWorld\HelloWorld\main.cpp(10,1): warning C4267: “=”: 从“size_t”转换到“unsigned int”，可能丢失数据
   HelloWorld.vcxproj -> E:\Dev\CppSeries\ChernoCpp\HelloWorld\x64\Debug\HelloWorld.exe
